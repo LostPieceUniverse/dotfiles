@@ -2,7 +2,7 @@
 
 My personal configuration files for various applications and tools on EndeavorOS.
 
-![Desktop Setup](./Image.jpg)
+![Desktop Setup](./Image.png)
 
 ## Contents
 
