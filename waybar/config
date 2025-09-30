@@ -1,0 +1,91 @@
+{
+	"layer": "top",
+	"position": "top",
+
+	//----------right----------
+
+	"modules-right": [
+        	"sway/workspaces",
+        ],
+
+	 "sway/workspaces": {
+         	"disable-scroll": true,
+         	"all-outputs": true,
+         	"format": "{icon}",
+         	"format-icons": {
+             	"1": "",
+             	"9": "",
+             	"8": "",
+		          "10": "🗪",
+              "urgent": "",
+         	}
+     },
+
+	//----------center----------
+
+	"modules-center": [
+		"clock#1",
+		"clock#2",
+		"clock#3",
+	],      
+	"clock#1": {
+                "format": "{:%a}",
+                "tooltip": false
+        },
+        "clock#2": {
+                "format": "{:%H:%M}",
+                "tooltip": false
+        },
+        "clock#3": {
+                "format": "{:%m-%d}",
+                "tooltip": false
+        },
+
+	//----------left----------
+
+        "modules-left": [
+                "tray",
+                "pulseaudio",
+                "battery",
+                "network",
+                "cpu"
+        ],
+        "tray": {
+                "icon-size": 21,
+                "spacing": 10
+        },
+	"pulseaudio": {
+        	//"scroll-step": 1,
+        	"format": "{volume}% {icon}",
+        	"format-bluetooth": "{volume}% {icon}",
+        	"format-muted": "",
+        	"format-icons": {
+            		"default": ["", ""]
+        	},
+        	"on-click": "pavucontrol"
+    	},
+    	"battery": {
+        	"states": {
+            		"good": 95,
+            		"warning": 30,
+            		"critical": 15
+        	},
+        "format": "{capacity}% {icon}",
+	"format-full": "",
+	"format-icons": ["", "", "", "", ""]
+    	},
+    	"battery#bat2": {
+        	"bat": "BAT2"
+    	},
+        "network": {
+                "format-wifi": "{essid} ({signalStrength}%) ",
+                "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+                "format-disconnected": "Disconnected ⚠",
+                "interval" : 7,
+		"on-click": "swaymsg exec '$term nmtui'"
+        },
+	"cpu": {
+		"interval": 5,
+		"format": "{usage}% "
+	},
+}

@@ -1,0 +1,83 @@
+* {
+	font-size: 13px;
+	font-family: monospace;
+}
+
+window#waybar,
+#workspaces {
+	background: rgba(199, 255, 201, 0.78);
+	color: #fdf6e3;
+}
+
+window#waybar.hidden {
+    	opacity: 0.0;
+}
+#battery,
+#cpu,
+#tray,
+#pulseaudio,
+#network {
+        background: rgba(114, 197, 112, 0.8);
+        padding: 0 10px;
+        color: #57853f;
+        border-radius: 5px;
+}
+
+/*__________right__________*/
+
+#workspaces button {
+	padding: 0 5px;
+    	background: transparent;
+    	color: #57853f;
+}
+#workspaces button.focused {
+    	background: #71f775;
+}
+#workspaces button.urgent {
+	background-color: #33621e;
+}
+
+/*__________center___________*/
+
+
+#clock.1,
+#clock.2,
+#clock.3 {
+	background: rgba(114, 197, 112, 0.8);
+	padding: 0 5px;
+	color: #57853f;
+  	border-radius: 5px;
+}
+
+/*__________left__________*/
+
+#tray {
+	color: #001eff;
+}
+
+#pulseaudio {
+	color: #57853f;
+}
+#battery {
+	color: #57853f;
+}
+#battery.charging {
+	color: #FFA500;
+}
+#battery.critical:not(.charging) {
+    	color: #990000;
+    	animation-name: blink;
+    	animation-duration: 0.5s;
+    	animation-timing-function: linear;
+    	animation-iteration-count: infinite;
+    	animation-direction: alternate;
+}
+#network {
+    	color: #57853f;
+}
+#network.disconnected {
+	color: #990000;
+}
+#cpu {
+	color: #57853f;
+}
